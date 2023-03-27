@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function ListDates() {
-  const [dates, setDates] = useState<Array<string>>([
-    "2022-05-01.json",
-    "2022-05-02.json",
-  ]);
+  const [dates, setDates] = useState<Array<string>>([]);
+
+  useEffect(() => {
+    fetch('/api/ls')
+      .then(response => response.json())
+      .then(data => setDates(data['names']))
+      .catch(error => console.error(error));
+  }, []);
 
   return (
     <div>
