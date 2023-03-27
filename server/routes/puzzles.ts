@@ -8,7 +8,9 @@ export const listPuzzles = (req: any, res: any) => {
         console.error(err);
         return;
       }
-      res.json({names: files})
+      res.json({names: files
+            .filter(filename => filename.endsWith('.json'))
+            .map(filename => filename.substring(0, filename.length - 5))});
     });
   };
   

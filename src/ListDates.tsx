@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ListDates() {
   const [dates, setDates] = useState<Array<string>>([]);
@@ -12,9 +13,9 @@ function ListDates() {
 
   return (
     <div>
-      <h1>Listing days</h1>
-      {dates.map((date) => {
-        return <div>{date}</div>;
+      <h1>Which puzzle would you like to work on?</h1>
+      {dates.map((filename) => {
+        return <Link to={`/${filename}`}>{filename}</Link>;
       })}
     </div>
   );
