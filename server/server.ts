@@ -20,7 +20,7 @@ app.post("/api/messages", postMessages);
 app.put("/api/messages/:id", putMessage);
 
 app.get("/api/ls", listPuzzles);
-app.get("/api/getPuzzle", listPuzzles);
+app.get("/api/getPuzzle", getPuzzle);
 
 // tslint:disable-next-line:no-console
 app.listen(port, () => console.log(`Listening on port ${port}`));

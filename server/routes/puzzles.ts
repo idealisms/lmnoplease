@@ -1,9 +1,10 @@
 import fs from 'fs';
 
-export const listPuzzles = (req: any, res: any) => {
-    const path = './data';
+const PUZZLE_DIR = './data';
 
-    fs.readdir(path, (err, files) => {
+export const listPuzzles = (req: any, res: any) => {
+
+    fs.readdir(PUZZLE_DIR, (err, files) => {
       if (err) {
         console.error(err);
         return;
@@ -12,11 +13,25 @@ export const listPuzzles = (req: any, res: any) => {
             .filter(filename => filename.endsWith('.json'))
             .map(filename => filename.substring(0, filename.length - 5))});
     });
-  };
+};
   
-  export const getPuzzle = (req: any, res: any) => {
-    res.send(
-      `I received your GET? request. This is what you sent me: ${req.body.put}`
-    );
-  };
-  
+export const getPuzzle = (req: any, res: any) => {
+    const date : string = req.query['date'] || '';
+    if (!date.match(/^\d{4}-\d{2}-\d{2}$/)) {
+        res.json({
+            'error': `Puzzle not found for "${date}".`,
+        })
+        return;
+    }
+
+    fs.readFile(`${PUZZLE_DIR}/${date}.json`, 'utf8', (err, data) => {
+        if (err) {
+            res.json({
+                'error': `Puzzle not found for "${date}".`,
+                'err': err.message,
+            })
+            return;
+        }
+        res.json(JSON.parse(data));
+    });
+};

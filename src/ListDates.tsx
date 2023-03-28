@@ -15,7 +15,7 @@ function ListDates() {
     <div>
       <h1>Which puzzle would you like to work on?</h1>
       {dates.map((filename) => {
-        return <Link to={`/${filename}`}>{filename}</Link>;
+        return <Link key={filename} to={`/${filename}`}>{filename}</Link>;
       })}
     </div>
   );
