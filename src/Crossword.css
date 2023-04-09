@@ -1,0 +1,48 @@
+/* TODO: handle narrow viewports (portrait mode) */
+.board {
+    width: 50vw;
+    height: calc(100vw / 2);
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #000;
+}
+
+.row {
+    display: flex;
+    flex: 1 0 0;
+}
+.row:not(:first-child) {
+    border-top: 1px solid #888;
+}
+
+.cell {
+    flex: 1 0 0;
+    display: flex;
+    position: relative;
+    container: cell / size;
+}
+.cell:not(:last-child) {
+    border-right: 1px solid #888;
+}
+
+.filled {
+    background-color: #000;
+}
+
+.label {
+    position: absolute;
+    left: 6%;
+    top: 2%;
+    font-size: small;
+}
+
+@container cell (max-width: 36px) {
+    .label {
+        font-size: x-small;
+    }
+}
+@container cell (max-width: 31px) {
+    .label {
+        display: none;
+    }
+}
