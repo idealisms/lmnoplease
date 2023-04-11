@@ -36,6 +36,7 @@
     font-size: small;
 }
 
+/* Replace @container with fixed size values. */
 @container cell (max-width: 36px) {
     .label {
         font-size: x-small;
