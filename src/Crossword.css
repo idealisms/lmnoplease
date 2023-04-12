@@ -1,7 +1,7 @@
 /* TODO: handle narrow viewports (portrait mode) */
 .board {
-    width: 50vw;
-    height: calc(100vw / 2);
+    width: calc(64px * 15 + 14px);
+    height: calc(64px * 15 + 14px);
     display: flex;
     flex-direction: column;
     border: 4px solid #000;
@@ -36,6 +36,8 @@
     font-size: small;
 }
 
+
+
 /* Replace @container with fixed size values. */
 @container cell (max-width: 36px) {
     .label {
@@ -47,3 +49,253 @@
         display: none;
     }
 }
+
+
+/* Frome generate-css.py */
+@media (max-width: 1349px) {
+    .board {
+      width: 959px;
+      height: 959px;
+    }
+  }
+  @media (max-width: 1333px) {
+    .board {
+      width: 944px;
+      height: 944px;
+    }
+  }
+  @media (max-width: 1317px) {
+    .board {
+      width: 929px;
+      height: 929px;
+    }
+  }
+  @media (max-width: 1301px) {
+    .board {
+      width: 914px;
+      height: 914px;
+    }
+  }
+  @media (max-width: 1285px) {
+    .board {
+      width: 899px;
+      height: 899px;
+    }
+  }
+  @media (max-width: 1269px) {
+    .board {
+      width: 884px;
+      height: 884px;
+    }
+  }
+  @media (max-width: 1253px) {
+    .board {
+      width: 869px;
+      height: 869px;
+    }
+  }
+  @media (max-width: 1237px) {
+    .board {
+      width: 854px;
+      height: 854px;
+    }
+  }
+  @media (max-width: 1221px) {
+    .board {
+      width: 839px;
+      height: 839px;
+    }
+  }
+  @media (max-width: 1205px) {
+    .board {
+      width: 824px;
+      height: 824px;
+    }
+  }
+  @media (max-width: 1189px) {
+    .board {
+      width: 809px;
+      height: 809px;
+    }
+  }
+  @media (max-width: 1173px) {
+    .board {
+      width: 794px;
+      height: 794px;
+    }
+  }
+  @media (max-width: 1157px) {
+    .board {
+      width: 779px;
+      height: 779px;
+    }
+  }
+  @media (max-width: 1141px) {
+    .board {
+      width: 764px;
+      height: 764px;
+    }
+  }
+  @media (max-width: 1125px) {
+    .board {
+      width: 749px;
+      height: 749px;
+    }
+  }
+  @media (max-width: 1109px) {
+    .board {
+      width: 734px;
+      height: 734px;
+    }
+  }
+  @media (max-width: 1093px) {
+    .board {
+      width: 719px;
+      height: 719px;
+    }
+  }
+  @media (max-width: 1077px) {
+    .board {
+      width: 704px;
+      height: 704px;
+    }
+  }
+  @media (max-width: 1061px) {
+    .board {
+      width: 689px;
+      height: 689px;
+    }
+  }
+  @media (max-width: 1045px) {
+    .board {
+      width: 674px;
+      height: 674px;
+    }
+  }
+  @media (max-width: 1029px) {
+    .board {
+      width: 659px;
+      height: 659px;
+    }
+  }
+  @media (max-width: 1013px) {
+    .board {
+      width: 644px;
+      height: 644px;
+    }
+  }
+  @media (max-width: 997px) {
+    .board {
+      width: 629px;
+      height: 629px;
+    }
+  }
+  @media (max-width: 981px) {
+    .board {
+      width: 614px;
+      height: 614px;
+    }
+  }
+  @media (max-width: 965px) {
+    .board {
+      width: 599px;
+      height: 599px;
+    }
+  }
+  @media (max-width: 949px) {
+    .board {
+      width: 584px;
+      height: 584px;
+    }
+  }
+  @media (max-width: 933px) {
+    .board {
+      width: 569px;
+      height: 569px;
+    }
+  }
+  @media (max-width: 917px) {
+    .board {
+      width: 554px;
+      height: 554px;
+    }
+  }
+  @media (max-width: 901px) {
+    .board {
+      width: 539px;
+      height: 539px;
+    }
+  }
+  @media (max-width: 885px) {
+    .board {
+      width: 524px;
+      height: 524px;
+    }
+  }
+  @media (max-width: 869px) {
+    .board {
+      width: 509px;
+      height: 509px;
+    }
+  }
+  @media (max-width: 853px) {
+    .board {
+      width: 494px;
+      height: 494px;
+    }
+  }
+  @media (max-width: 837px) {
+    .board {
+      width: 479px;
+      height: 479px;
+    }
+  }
+  @media (max-width: 821px) {
+    .board {
+      width: 464px;
+      height: 464px;
+    }
+  }
+  @media (max-width: 805px) {
+    .board {
+      width: 449px;
+      height: 449px;
+    }
+  }
+  @media (max-width: 789px) {
+    .board {
+      width: 434px;
+      height: 434px;
+    }
+  }
+  @media (max-width: 773px) {
+    .board {
+      width: 419px;
+      height: 419px;
+    }
+  }
+  @media (max-width: 757px) {
+    .board {
+      width: 404px;
+      height: 404px;
+    }
+  }
+  @media (max-width: 741px) {
+    .board {
+      width: 389px;
+      height: 389px;
+    }
+  }
+  @media (max-width: 725px) {
+    .board {
+      width: 374px;
+      height: 374px;
+    }
+  }
+  @media (max-width: 709px) {
+    .board {
+      width: 359px;
+      height: 359px;
+    }
+  }
+  
